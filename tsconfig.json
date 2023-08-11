@@ -1,0 +1,21 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@api/*": ["src/api/*"],
+      "@fixtures/*": ["tests/fixtures/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@config": ["src/config/*"]
+    },
+    "esModuleInterop": true,
+    "declaration": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "typeRoots": ["./node_modules/@types","./src/@types"]
+  },
+  "include": ["src/**/*", "tests/**/*"],
+  "exclude": ["node_modules"]
+}

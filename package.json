@@ -1,0 +1,42 @@
+{
+  "name": "crypto-wallet",
+  "version": "0.0.1",
+  "description": "Trust Wallet integration",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "dev": "nodemon . -e ts",
+    "test": "jest --force-exit --detectOpenHandles --silent",
+    "test:watch": "npm run test -- --verbose --watch",
+    "clear": "rimraf dist",
+    "build": "npm run clear && tsc -b tsconfig.build.json",
+    "lint": "eslint ./src/** ./tests/** --ext .json,.ts",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamidjackal/crypto-wallet.git"
+  },
+  "author": "Hamid Tehrani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamidjackal/crypto-wallet/issues"
+  },
+  "homepage": "https://github.com/hamidjackal/crypto-wallet#readme",
+  "engines": {
+    "node": "^18.16.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.0",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.4.1",
+    "eslint": "^8.21.0",
+    "jest": "^29.6.1",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
